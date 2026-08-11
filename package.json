@@ -1,6 +1,6 @@
 {
   "name": "@uarix/agent-harness-detector",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Detect which AI agent / harness environment your Node.js process is running in (WorkBuddy, Kimi, Claude Code, Codex, Cursor, Copilot, OpenCode, Doubao, ...) via environment signals and process-tree matching.",
   "license": "MIT",
   "author": "agent-harness-detector contributors",
