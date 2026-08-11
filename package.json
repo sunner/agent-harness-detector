@@ -1,0 +1,78 @@
+{
+  "name": "agent-harness-detector",
+  "version": "1.0.0",
+  "description": "Detect which AI agent / harness environment your Node.js process is running in (WorkBuddy, Kimi, Claude Code, Codex, Cursor, Copilot, OpenCode, Doubao, ...) via environment signals and process-tree matching.",
+  "license": "MIT",
+  "author": "agent-harness-detector contributors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uarix/agent-harness-detector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uarix/agent-harness-detector/issues"
+  },
+  "homepage": "https://github.com/uarix/agent-harness-detector#readme",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "agent-harness-detector": "./dist/cli.cjs"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "keywords": [
+    "agent",
+    "ai-agent",
+    "harness",
+    "workbuddy",
+    "kimi",
+    "claude-code",
+    "codex",
+    "qoder",
+    "doubao",
+    "openclaw",
+    "detector"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/node": "^22.10.0",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^10.0.0",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0",
+    "vitest": "^3.0.0"
+  }
+}
