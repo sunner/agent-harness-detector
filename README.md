@@ -9,13 +9,13 @@ Detect which AI agent / coding harness your Node.js process is running in, using
 ## Install
 
 ```bash
-npm install agent-harness-detector
+npm install @uarix/agent-harness-detector
 ```
 
 ## Usage
 
 ```ts
-import { detect, detectAll } from 'agent-harness-detector';
+import { detect, detectAll } from '@uarix/agent-harness-detector';
 
 detect(); // 'claudecode' | 'workbuddy' | null
 detectAll(); // all matches, e.g. ['cursor', 'opencode']
