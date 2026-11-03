@@ -308,4 +308,5 @@ export const AGENT_DETECTORS: ReadonlyArray<AgentEntry> = [
   { id: 'pi', detectEnv: pi },
   { id: 'replit', detectEnv: replit },
   { id: 'rork', detectEnv: rork },
+  { id: 'lingguang', detectEnv: ({ env }) => !!env['EXEC_FROM'] },
 ];
