@@ -308,4 +308,11 @@ export const AGENT_DETECTORS: ReadonlyArray<AgentEntry> = [
   { id: 'pi', detectEnv: pi },
   { id: 'replit', detectEnv: replit },
   { id: 'rork', detectEnv: rork },
+  {
+    id: 'instinct',
+    detectEnv: ({ env }) =>
+      !!env['INSTINCT_OUTER_TOOL_USE_ID'] ||
+      !!env['INSTINCT_OUTER_TOOL_USE_STARTED_AT'] ||
+      !!env['INSTINCT_OUTER_TOOL_USE_TIMEOUT_SECONDS'],
+  },
 ];
