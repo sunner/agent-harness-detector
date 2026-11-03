@@ -1,6 +1,7 @@
 import { expect, test } from 'vitest';
-import { detect } from '../src/index.js';
+import { AGENT_IDS, detect } from '../src/index.js';
 test('Claude Cowork execution marker and boundaries', () => {
+  expect(AGENT_IDS).toContain('cowork');
   for (const env of [
     { CLAUDE_CODE_IS_COWORK: '1', CLAUDECODE: '1' },
     { CLAUDE_CODE_IS_COWORK: '0', CLAUDECODE: '1' },
