@@ -223,12 +223,6 @@ function cursor({ env }: DetectorContext): boolean {
   return env.CURSOR_AGENT === '1' || env.CURSOR_CONVERSATION_ID !== undefined;
 }
 
-function devin(): boolean {
-  // Devin has no environment signals; it is matched via the process-tree
-  // strategy using the `/devin/i` pattern below.
-  return false;
-}
-
 function gemini({ env }: DetectorContext): boolean {
   return env.GEMINI_CLI === '1';
 }
@@ -296,7 +290,6 @@ export const AGENT_DETECTORS: ReadonlyArray<AgentEntry> = [
     processPatterns: [/^(github-copilot-cli|copilot)$/i],
   },
   { id: 'cursor', detectEnv: cursor, processPatterns: [/^cursor$/i] },
-  { id: 'devin', detectEnv: devin, processPatterns: [/devin/i] },
   { id: 'gemini', detectEnv: gemini, processPatterns: [/^gemini$/i] },
   { id: 'kiro', detectEnv: kiro, processPatterns: [/kiro/i] },
   {
@@ -308,4 +301,9 @@ export const AGENT_DETECTORS: ReadonlyArray<AgentEntry> = [
   { id: 'pi', detectEnv: pi },
   { id: 'replit', detectEnv: replit },
   { id: 'rork', detectEnv: rork },
+  {
+    id: 'devin',
+    detectEnv: ({ env }) => !!env['DEVIN_DIR'] || !!env['DEVIN_DISABLE_HISTEXPAND'],
+    processPatterns: [/devin/i],
+  },
 ];
