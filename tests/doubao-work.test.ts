@@ -1,6 +1,7 @@
 import { expect, test } from 'vitest';
-import { detect } from '../src/index.js';
+import { AGENT_IDS, detect } from '../src/index.js';
 test('Doubao Work execution marker and boundaries', () => {
+  expect(AGENT_IDS).toContain('doubao-work');
   for (const env of [
     { DOUBAO_OFFICE_AGENT_NAME: '1' },
     { DOUBAO_OFFICE_AGENT_NAME: '0' },
