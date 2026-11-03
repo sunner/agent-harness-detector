@@ -262,6 +262,10 @@ function rork({ env }: DetectorContext): boolean {
  * first entry wins (see `detectAll` / `detect` in index.ts).
  */
 export const AGENT_DETECTORS: ReadonlyArray<AgentEntry> = [
+  {
+    id: 'muse',
+    detectEnv: ({ env }) => !!env['JARVIS_IS_ASSIGNED'] || !!env['JARVIS_TOOL_CALL_ID'],
+  },
   { id: 'workbuddy', detectEnv: workbuddy },
   { id: 'kimiwork', detectEnv: kimiwork },
   { id: 'kimiclaw', detectEnv: kimiclaw },
