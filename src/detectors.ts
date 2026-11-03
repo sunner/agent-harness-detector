@@ -262,6 +262,11 @@ function rork({ env }: DetectorContext): boolean {
  * first entry wins (see `detectAll` / `detect` in index.ts).
  */
 export const AGENT_DETECTORS: ReadonlyArray<AgentEntry> = [
+  {
+    id: 'grok-build',
+    detectEnv: ({ env }) =>
+      env['GROK_AGENT'] === '1' || !!env['GROK_PLUGIN_ROOT'] || !!env['GROK_PLUGIN_DATA'],
+  },
   { id: 'workbuddy', detectEnv: workbuddy },
   { id: 'kimiwork', detectEnv: kimiwork },
   { id: 'kimiclaw', detectEnv: kimiclaw },
