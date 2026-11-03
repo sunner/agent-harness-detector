@@ -40,6 +40,7 @@ export const AGENT_IDS = [
   'pi',
   'replit',
   'rork',
+  'deepseek-harness',
 ] as const;
 
 export type AgentId = (typeof AGENT_IDS)[number];

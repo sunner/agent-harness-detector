@@ -303,8 +303,8 @@ describe('helpers', () => {
     expect(isKnownAgent('claude_code')).toBe(false);
   });
 
-  it('AGENT_IDS has 33 entries and matches original order', () => {
-    expect(AGENT_IDS).toHaveLength(33);
+  it('AGENT_IDS has 34 entries and matches original order', () => {
+    expect(AGENT_IDS).toHaveLength(34);
     expect(AGENT_IDS[0]).toBe('workbuddy');
     expect(AGENT_IDS[19]).toBe('qwencowork');
     expect(AGENT_IDS[20]).toBe('antigravity');
