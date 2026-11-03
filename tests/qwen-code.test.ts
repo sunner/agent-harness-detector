@@ -1,6 +1,7 @@
 import { expect, test } from 'vitest';
-import { detect } from '../src/index.js';
+import { AGENT_IDS, detect } from '../src/index.js';
 test('Qwen Code execution marker and boundaries', () => {
+  expect(AGENT_IDS).toContain('qwen-code');
   for (const env of [
     { QWEN_CODE: '1' },
     { QWEN_CODE: '0' },
