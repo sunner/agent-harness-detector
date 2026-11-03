@@ -1,6 +1,7 @@
 import { expect, test } from 'vitest';
-import { detect } from '../src/index.js';
+import { AGENT_IDS, detect } from '../src/index.js';
 test('Manus execution marker and boundaries', () => {
+  expect(AGENT_IDS).toContain('manus');
   for (const env of [
     { MANUS_ADDON_RUNTIME_SPEC_PATH: '1' },
     { MANUS_ADDON_RUNTIME_SPEC_PATH: '0' },
