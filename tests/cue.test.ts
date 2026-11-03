@@ -1,6 +1,7 @@
 import { expect, test } from 'vitest';
-import { detect } from '../src/index.js';
+import { AGENT_IDS, detect } from '../src/index.js';
 test('Cue execution marker and boundaries', () => {
+  expect(AGENT_IDS).toContain('cue');
   for (const env of [
     { MANUS_LONG_DESKTOP_WORKER: '1' },
     { MANUS_LONG_DESKTOP_WORKER: '0' },
