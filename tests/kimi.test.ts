@@ -1,6 +1,7 @@
 import { expect, test } from 'vitest';
-import { detect } from '../src/index.js';
+import { AGENT_IDS, detect } from '../src/index.js';
 test('Kimi Code execution marker and boundaries', () => {
+  expect(AGENT_IDS).toContain('kimi');
   for (const env of [
     { KIMI_PLUGIN_ROOT: '1' },
     { KIMI_PLUGIN_ROOT: '0' },
