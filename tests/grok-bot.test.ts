@@ -1,6 +1,7 @@
 import { expect, test } from 'vitest';
-import { detect } from '../src/index.js';
+import { AGENT_IDS, detect } from '../src/index.js';
 test('Grok Bot execution marker and boundaries', () => {
+  expect(AGENT_IDS).toContain('grok-bot');
   for (const env of [
     { SAND_AGENT: '1' },
     { SAND_AGENT: '0' },
