@@ -262,6 +262,7 @@ function rork({ env }: DetectorContext): boolean {
  * first entry wins (see `detectAll` / `detect` in index.ts).
  */
 export const AGENT_DETECTORS: ReadonlyArray<AgentEntry> = [
+  { id: 'roo-code', detectEnv: ({ env }) => !!env['ROO_ACTIVE'] || !!env['ROO_CLI_RUNTIME'] },
   { id: 'workbuddy', detectEnv: workbuddy },
   { id: 'kimiwork', detectEnv: kimiwork },
   { id: 'kimiclaw', detectEnv: kimiclaw },
