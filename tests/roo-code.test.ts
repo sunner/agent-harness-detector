@@ -1,6 +1,7 @@
 import { expect, test } from 'vitest';
-import { detect } from '../src/index.js';
+import { AGENT_IDS, detect } from '../src/index.js';
 test('Roo Code execution marker and boundaries', () => {
+  expect(AGENT_IDS).toContain('roo-code');
   for (const env of [
     { ROO_ACTIVE: '1' },
     { ROO_ACTIVE: '0' },
