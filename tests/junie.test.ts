@@ -1,6 +1,7 @@
 import { expect, test } from 'vitest';
-import { detect } from '../src/index.js';
+import { AGENT_IDS, detect } from '../src/index.js';
 test('Junie execution marker and boundaries', () => {
+  expect(AGENT_IDS).toContain('junie');
   for (const env of [
     { JUNIE_SHIM_PATH: '1' },
     { JUNIE_SHIM_PATH: '0' },
