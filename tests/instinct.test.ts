@@ -1,6 +1,7 @@
 import { expect, test } from 'vitest';
-import { detect } from '../src/index.js';
+import { AGENT_IDS, detect } from '../src/index.js';
 test('Instinct execution marker and boundaries', () => {
+  expect(AGENT_IDS).toContain('instinct');
   for (const env of [
     { INSTINCT_OUTER_TOOL_USE_ID: '1' },
     { INSTINCT_OUTER_TOOL_USE_ID: '0' },
