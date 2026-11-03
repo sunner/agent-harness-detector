@@ -1,6 +1,7 @@
 import { expect, test } from 'vitest';
-import { detect } from '../src/index.js';
+import { AGENT_IDS, detect } from '../src/index.js';
 test('Grok Build execution marker and boundaries', () => {
+  expect(AGENT_IDS).toContain('grok-build');
   for (const env of [
     { GROK_AGENT: '1' },
     { GROK_PLUGIN_ROOT: '1' },
