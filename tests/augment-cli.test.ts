@@ -1,6 +1,7 @@
 import { expect, test } from 'vitest';
-import { detect } from '../src/index.js';
+import { AGENT_IDS, detect } from '../src/index.js';
 test('Augment CLI execution marker and boundaries', () => {
+  expect(AGENT_IDS).toContain('augment-cli');
   for (const env of [
     { AUGMENT_AGENT: '1' },
     { AUGMENT_AGENT: '0' },
