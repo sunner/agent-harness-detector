@@ -1,6 +1,7 @@
 import { expect, test } from 'vitest';
-import { detect } from '../src/index.js';
+import { AGENT_IDS, detect } from '../src/index.js';
 test('Muse execution marker and boundaries', () => {
+  expect(AGENT_IDS).toContain('muse');
   for (const env of [
     { JARVIS_IS_ASSIGNED: '1' },
     { JARVIS_IS_ASSIGNED: '0' },
