@@ -4,7 +4,7 @@ Detect which AI agent / coding harness your Node.js process is running in, using
 
 ## Supported agents
 
-`workbuddy` · `kimiwork` · `kimiclaw` · `hermes` · `wukong` · `arkclawcloud` · `qclaw` · `claudecode` · `codex` · `qwenwork` · `qoderwork` · `qodercloud` · `qoder` · `minimax` · `doubao` · `doubaocloud` · `easyclaw` · `maxclawcloud` · `openclaw` · `qwencowork` · `antigravity` · `bolt` · `cline` · `copilot` · `cursor` · `devin` · `gemini` · `kiro` · `kilocode` · `opencode` · `pi` · `replit` · `rork`
+`workbuddy` · `kimiwork` · `kimiclaw` · `hermes` · `wukong` · `arkclawcloud` · `qclaw` · `claudecode` · `codex` · `qwenwork` · `qoderwork` · `qodercloud` · `qoder` · `minimax` · `doubao` · `doubaocloud` · `easyclaw` · `maxclawcloud` · `openclaw` · `qwencowork` · `antigravity` · `bolt` · `cline` · `copilot` · `cursor` · `devin` · `gemini` · `kiro` · `kilocode` · `opencode` · `pi` · `replit` · `rork` · `trae`
 
 ## Install
 
