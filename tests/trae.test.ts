@@ -1,6 +1,7 @@
 import { expect, test } from 'vitest';
-import { detect } from '../src/index.js';
+import { AGENT_IDS, detect } from '../src/index.js';
 test('TRAE execution marker and boundaries', () => {
+  expect(AGENT_IDS).toContain('trae');
   for (const env of [
     { TRAE_AI_SHELL_ID: '1' },
     { TRAE_AI_SHELL_ID: '0' },
